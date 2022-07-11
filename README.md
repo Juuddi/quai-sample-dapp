@@ -12,7 +12,7 @@ The app utilizes [Browserify's](https://browserify.org/) bundling functionality 
 
 The application can be seen below.
 
-![SiteScreenshot](assets/images/SiteScreenshot.png)
+![SiteScreenshot](assets/images/Screenshot.png)
 
 ### Dependencies
 
