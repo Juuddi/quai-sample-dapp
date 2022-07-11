@@ -1,0 +1,22 @@
+{
+  "name": "quai-sample-dapp",
+  "version": "1.0.0",
+  "description": "A simple Quai Network dApp example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juuddi/quai-sample-dapp.git"
+  },
+  "author": "Juuddi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juuddi/quai-sample-dapp/issues"
+  },
+  "homepage": "https://github.com/Juuddi/quai-sample-dapp#readme",
+  "dependencies": {
+    "@metamask/detect-provider": "^1.2.0"
+  }
+}

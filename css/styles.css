@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "west England";
+    src: url('../assets/fonts/PressStart2P-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "west England";
+    font-size: 9px;
+    background-image: url(../assets/images/stars.png);
+}
+
+.button:active {
+    background-color: #2c2f2c;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+.button:disabled {
+    background-color: #2c2f2c;
+    box-shadow: 2px 2px #666;
+}
+
+.connect-button {
+    position: absolute;
+    top: 20px;
+}
+
+input,
+    textarea {
+        width: 100%;
+        padding: 2px;
+        border: 1px solid black;
+        font-family: monospace;
+    }
+
+button {
+    font-family: "west England";
+    font-size: 10px;
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 2px 2px 0 0,#000 3px 3px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 5px 8px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.address-container {
+    position: absolute;
+    text-align: center;
+    top: 80px;
+}
+
+fieldset {
+    width: 240px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px, rgba(0, 0, 0, 0.2) 6px 6px, rgba(0, 0, 0, 0.1) 9px 9px;
+    background-color: white;
+    text-align: center;
+}
+
+#balance-display {
+    border: 1px black solid;
+    text-align: center;
+    justify-content: center;
+}
+
+#accounts-list {
+    position: absolute;
+    top: 170px;
+}
+
+#flask-notinstalled-alert {
+    position: absolute;
+    top: 240px;
+    left: 645px;
+    width: 320px;
+    text-align: left;
+    line-height: 15px;
+}
+
+.alert-fieldset{
+    background-color: #e9a4a4;
+}
+
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 9px;
+}
+
+a:link { text-decoration: none; }
+a:visited { 
+    text-decoration: none; 
+    color: white;
+}
+
+
+

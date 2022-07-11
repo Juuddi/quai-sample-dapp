@@ -1,0 +1,4 @@
+#general files
+node_modules
+.vscode
+bundle.js
