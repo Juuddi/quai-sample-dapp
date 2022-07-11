@@ -1,22 +1,23 @@
+// Define buttons and modules
 const detectEthereumProvider = require ('@metamask/detect-provider');
 const connectButton = document.getElementById('connect');
-const connectButtonContainer = document.getElementById('connect-button');
 const balanceDisplay = document.getElementById('balance-display');
 const accountsList = document.getElementById('accounts-list');
 const accountsAlert = document.getElementById('connect-accounts-alert');
 const flaskAlert = document.getElementById('flask-notinstalled-alert');
 flaskAlert.style.display = "none";
 
-
 const initialize = async () => { 
     let accounts = [];
     let currentAccount = "";
-
+    
+    // Check provider
     const provider = await detectEthereumProvider();
     const isFlask = (
         await provider?.request({ method: 'web3_clientVersion' })
     )?.includes('flask');
     
+    // Connect button flow
     const onClickConnect = async () => {
         await ethereum.request({
             method: 'wallet_enable',
@@ -42,8 +43,10 @@ const initialize = async () => {
         }
     }
 
+    // Check if accounts exist
     const isFlaskConnected = () => accounts && accounts.length > 0
 
+    // Update buttons when user takes action
     const updateConnectButton = () => {
         const connectionCheck = !isFlaskConnected() && !isFlask;
         if (!isFlask) {
@@ -63,6 +66,7 @@ const initialize = async () => {
         }
     }
 
+    // Deal wit new accounts
     function handleNewAccounts(newAccounts) {
         accounts = newAccounts;
         populateAccounts(accounts);
@@ -70,6 +74,7 @@ const initialize = async () => {
     }
     updateConnectButton();
 
+    // Set current account and update UI on buttons
     const setCurrentAccount = async (accounts) => {
         const currentAccount = accounts[0].addr;
         let slice1 = currentAccount.slice(0,6);
@@ -87,6 +92,7 @@ const initialize = async () => {
         getAccountBalance(currentAccount);
     }
 
+    // Get account balance
     const getAccountBalance = async (currentAccount) => {
         const balance = await ethereum.request({
             method: 'wallet_invokeSnap',
@@ -100,6 +106,7 @@ const initialize = async () => {
 
     }
 
+    // Populate accounts list
     function populateAccounts() {
         console.log(accounts)
         for (let i=0; i < accounts.length; i++) {
