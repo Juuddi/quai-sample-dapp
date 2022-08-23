@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Metamask Flask Demo Site</title>
+        <link rel="stylesheet" href="../finished/css/styles.css">
+    </head>
+    <body>
+        <img src="../finished/assets/images/BLACK_LOGO AND FULL TEXT.png" alt="quailogo" class="logo">
+        <div class="flask-notinstalled-alert" id="flask-notinstalled-alert" style="display:none">
+            <fieldset class="alert-fieldset">
+                <div id="alert-text">
+                    This application uses the MetaMask Flask Chrome extension.<br> 
+                    MetaMask and MetaMask Flask are different browser extensions.<br>
+                    Install the MetaMask Flask extension and reload the page to use this application.
+                </div>
+            </fieldset>
+        </div>
+        <div class="connect-button" style="padding-bottom: 40px">
+        <button id="connect" class="button">Connect with Flask</button>
+        </div> 
+        <div class="address-container" id="address-container">
+            <fieldset>
+                <div style="text-align:left; padding-top: 5px; padding-bottom: 5px; vertical-align: top;">-Prime Address Balance----</div>
+                <div style="width: 99%; height: 18px; padding-top: 6px;" id="balance-display"></div>
+                <br>
+            </fieldset>
+        </div>
+        <fieldset id="accounts-list">
+            <legend>Available Accounts</legend>
+            <div id="connect-accounts-alert" style="padding-top: 5px;">Connect your wallet to view your accounts.</div>
+        </fieldset>
+        <div class="footer">2022 Dominant Strategies. All rights reserved.</div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="bundle.js"></script>
+    </body>

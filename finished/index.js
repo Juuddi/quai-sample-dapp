@@ -13,15 +13,13 @@ const initialize = async () => {
     
     // Check provider
     const provider = await detectEthereumProvider();
-    const isFlask = (
-        await provider?.request({ method: 'web3_clientVersion' })
-    )?.includes('flask');
+    const isFlask = (await provider?.request({ method: 'web3_clientVersion' }))?.includes('flask');
     
     // Connect button flow
     const onClickConnect = async () => {
         await ethereum.request({
             method: 'wallet_enable',
-            params: [{wallet_snap: { ['npm:@quainetwork/quai-snap']: {version: '0.1.0-pre.25'} },
+            params: [{wallet_snap: { ['npm:@quainetwork/quai-snap']: {version: '0.1.0-pre.27'} },
             }]
         }); 
         let newAccounts = await ethereum.request({        
@@ -53,7 +51,6 @@ const initialize = async () => {
             console.log('Flask is not installed.');
             connectButton.innerHTML = '<a href="https://metamask.io/flask/" target="_blank">Install MetaMask Flask</a>';
             $('flask-notinstalled-alert').show();
-            flaskAlert.style.display = "block";
         } if (isFlaskConnected()) {
             console.log('Flask connected, accounts recieved.');
             connectButton.disabled = true;
@@ -66,7 +63,7 @@ const initialize = async () => {
         }
     }
 
-    // Deal wit new accounts
+    // Deal with new accounts
     function handleNewAccounts(newAccounts) {
         accounts = newAccounts;
         populateAccounts(accounts);
